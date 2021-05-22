@@ -19,7 +19,7 @@ public class RejexProgramming
 		System.out.println("Enter the email");
 		String email = scan.nextLine();
 		scan.nextLine();
-		String regex = "^[abc]+@[bridgelabz](.+)[co]$";
+		String regex = "^[abc](.+)[A-Za-z+_.-]+@[bridgelabz](.+)[co](.+)[A-Za-z]$";
 		System.out.println("The email is: " + email);
 	    System.out.println("Check the email is correct? " + email.matches(regex));
 		
