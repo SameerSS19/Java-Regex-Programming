@@ -1,28 +1,34 @@
 package com.rejexprogram;
-import java.util.regex.*;
+import java.util.Scanner;
 public class RejexProgramming 
 {
-	public static boolean validatePin(String pinCode) {
+	public static void pincode()
+	{
+		System.out.println("Welcome to Java Patterns or Regular Expressions");
+		System.out.println("Enter the Pincode");
+		Scanner scan = new Scanner(System.in);
+		String pincode = scan.nextLine();
+		scan.nextLine();
 		String regex = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
+		System.out.println("The zip code is: " + pincode);
+	    System.out.println("Check Indian post the Pin code is correct ? " + pincode.matches(regex)); 
+	}
+	public static void email()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the email");
+		String email = sc.nextLine();
+		sc.nextLine();
+		String regex = "^[a-z](.+)$";
+		System.out.println("The email is: " + email);
+	    System.out.println("Check the email is correct? " + email.matches(regex));
 		
-		Pattern p = Pattern.compile(regex);
-		
-		if (pinCode == null) {
-			System.out.println("Invalid PIN");	
-		}
-		Matcher m = p.matcher(pinCode);
-		return m.matches();
-		 }
-	
-	public static void main(String[] args) {
-		System.out.println("Welcome to the PIN validation program");
-		String pin1 = "400088";
-		 System.out.println(pin1+" "+validatePin(pin1));
-		 String pin2 = "A400088";
-		 System.out.println(pin2+" "+validatePin(pin2));
-		 String pin3 = "400088B";
-		 System.out.println(pin3+" "+validatePin(pin3));
-		 String pin4 = "400 088";
-		 System.out.println(pin4+" "+validatePin(pin4));
+	}
+	public static void main(String[] args) 
+	{
+	pincode();
+	email();
+	}
+
 }
-}
+
