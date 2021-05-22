@@ -15,15 +15,16 @@ public class RejexProgramming
 	}
 	public static void email()
 	{
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the email");
-		String email = sc.nextLine();
-		sc.nextLine();
-		String regex = "^[a-z]@[bridgelabz(.+)$";
+		String email = scan.nextLine();
+		scan.nextLine();
+		String regex = "^[abc]+@[bridgelabz](.+)[co]$";
 		System.out.println("The email is: " + email);
 	    System.out.println("Check the email is correct? " + email.matches(regex));
 		
 	}
+	
 	public static void main(String[] args) 
 	{
 	pincode();
